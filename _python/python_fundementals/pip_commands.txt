@@ -1,0 +1,15 @@
+1) pip list: Displays the current package(s) installed on the virtual machine and their version numbers. Packages are listed in alphabetical order, case-sensitive
+
+2) deactivate: deactivates current virtual environment. 
+
+3) pip3 list: Always runs on the python3 environment ONLY. pip list will run on whatever environment is currently being utilized 
+
+4) pip install Django==2.2.4: Specifically installs the version of Django specified. In this case, installs it into the py3Env venv. Able to monitor the download and installation process in the console.
+
+5) pip freeze: outputs the installed packages in a "requirements" file, which can be put into a seperate file to assist in installing any dependencies
+
+6) pip freeze > requirements.txt: Generates a .txt file that has the dependencies for the currently active venv
+
+7) pip uninstall Django: Uninstalls the specified package
+
+8) pip show Django: searches for and displays the specified package, if present
