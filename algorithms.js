@@ -136,3 +136,46 @@
 // }
 
 // console.log(bracesValid2("({}[])<>", ['()', '[]', '{}', '<>']))
+
+function isPalindrome(input){
+    for (var i = 0 ; i < input.length; i++){
+        if (input[i] != input[input.length - (i + 1)]){
+            return false
+        }
+    }
+    return true
+}
+
+// console.log(isPalindrome("tacocat"))
+
+
+// longestPalindrome(input)
+// find and return the longest palindrome within your input string
+// "ehjgkkgeh" -> "gkkg"
+// "ehjg kkgeh" -> "kk"
+// "qwertttreqwerewy" -> "ertttre"
+// "abacabd" -> "aba" or "aca"
+// "abcde" -> "a" or "e", but probably "a"
+// "a" -> "a" (lol)
+// "racecar" -> "racecar"
+// "" -> ""
+
+function longestPalindrome(input) {
+    var counter = 0; 
+    var max = 0;
+    for (var i = 0; i < input.length; i++){
+        // checking input[i-1] and input[i+1] ==, if so, check next one. If not, stop and go on
+        for (var x = 0; x < input.length; x++){
+            if (input[x - 1] == input[x + 1]){
+                counter++;
+            }
+            else{
+                if(counter > max){
+                    max = counter * 2 + 1;
+                }
+                counter = 0;
+                break;
+            }
+        }
+    }
+}
