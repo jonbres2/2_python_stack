@@ -179,3 +179,47 @@ function longestPalindrome(input) {
         }
     }
 }
+
+// // can you improve this?
+// // shoot me a message if you figure out something cool
+// function longestPalindrome(input) {
+//     if (input.length == 0) {
+//       return "";
+//     }
+  
+//     // if input length is 1
+  
+//     var result = input[0]; //just in case we find nothing,like an input of "abc"
+  
+//     for (var i = 0; i < input.length; i++) {
+//       var left = 0;
+//       var right = 0;
+//       //determine if we have a string of idential characters
+//       //i.e. a trivial palindrome
+//       while (input[i - 1 - left] == input[i]) {
+//         left++;
+//       }
+//       while (input[i + 1 + right] == input[i]) {
+//         right++;
+//       }
+//       //now check for non-trivial palindromes
+//       while (input[i - 1 - left] == input[i+ 1 + right]) {
+//         if (input[i - 1 - left] === undefined && input[i+ 1 + right] === undefined) {
+//           console.log("entire string is palindrome");
+//           //special case here - entire string is a palindrome
+//           //just return the input
+//           return input;
+//         }
+//         left++;
+//         right++;
+//       }
+//       //we have a potential longest palindrome -
+//       //check it against the current longest
+//       potential = input.slice(i - left, i + right + 1);
+//       if (potential.length > result.length) {
+//         result = potential;
+//       }
+//     }
+    
+//     return result;
+//   }
