@@ -137,14 +137,14 @@
 
 // console.log(bracesValid2("({}[])<>", ['()', '[]', '{}', '<>']))
 
-function isPalindrome(input){
-    for (var i = 0 ; i < input.length; i++){
-        if (input[i] != input[input.length - (i + 1)]){
-            return false
-        }
-    }
-    return true
-}
+// function isPalindrome(input){
+//     for (var i = 0 ; i < input.length; i++){
+//         if (input[i] != input[input.length - (i + 1)]){
+//             return false
+//         }
+//     }
+//     return true
+// }
 
 // console.log(isPalindrome("tacocat"))
 
@@ -160,25 +160,25 @@ function isPalindrome(input){
 // "racecar" -> "racecar"
 // "" -> ""
 
-function longestPalindrome(input) {
-    var counter = 0; 
-    var max = 0;
-    for (var i = 0; i < input.length; i++){
-        // checking input[i-1] and input[i+1] ==, if so, check next one. If not, stop and go on
-        for (var x = 0; x < input.length; x++){
-            if (input[x - 1] == input[x + 1]){
-                counter++;
-            }
-            else{
-                if(counter > max){
-                    max = counter * 2 + 1;
-                }
-                counter = 0;
-                break;
-            }
-        }
-    }
-}
+// function longestPalindrome(input) {
+//     var counter = 0; 
+//     var max = 0;
+//     for (var i = 0; i < input.length; i++){
+//         // checking input[i-1] and input[i+1] ==, if so, check next one. If not, stop and go on
+//         for (var x = 0; x < input.length; x++){
+//             if (input[x - 1] == input[x + 1]){
+//                 counter++;
+//             }
+//             else{
+//                 if(counter > max){
+//                     max = counter * 2 + 1;
+//                 }
+//                 counter = 0;
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 // // can you improve this?
 // // shoot me a message if you figure out something cool
@@ -186,11 +186,11 @@ function longestPalindrome(input) {
 //     if (input.length == 0) {
 //       return "";
 //     }
-  
+
 //     // if input length is 1
-  
+
 //     var result = input[0]; //just in case we find nothing,like an input of "abc"
-  
+
 //     for (var i = 0; i < input.length; i++) {
 //       var left = 0;
 //       var right = 0;
@@ -223,3 +223,25 @@ function longestPalindrome(input) {
     
 //     return result;
 //   }
+
+
+
+// bookIndex(input)
+// input is an array of integers representing
+// pages in a book where a particular term is found
+// (you can assume everything is an integer - no Roman
+// numerals or anything)
+// output is a string that is formatted similarly
+// to a list of pages found in a book index
+// [1, 13, 14, 15, 37, 38] -> "1, 13-15, 37-38"
+// [7, 33, 34, 56, 57, 58, 59, 61] ->
+// "7, 33-34, 56-59, 61"
+//
+// suggestion: break this into two parts
+// go from [7, 33, 34, 56, 57, 58, 59, 61]
+// to ["7", "33-34", "56-59", "61"]
+// to "7, 33-34, 56-59, 61"
+
+function bookIndex(input) {
+
+}
