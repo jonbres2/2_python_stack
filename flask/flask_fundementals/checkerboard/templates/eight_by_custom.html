@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard (Custom rows)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/checkerboard.css') }}">
+</head>
+<body>
+<div class="container">
+    <table class="board">
+        {% for row in range(0, rowCount) %}
+            {% if row % 2 == 0 %}
+                <tr>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                    <td class="black"></td>
+                    <td class="red"></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>        
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* *{
+    border: 1px dotted red
+} */
+
+p{
+    color: red;
+}
+
+.container{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.board{
+    margin: 10px 50px;
+    border-collapse: collapse;
+    border: 5px solid black;
+}
+
+.board tr td{
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
+.color1{
+    background-color: red;
+}
+
+.color2{
+    background-color: black;
+}

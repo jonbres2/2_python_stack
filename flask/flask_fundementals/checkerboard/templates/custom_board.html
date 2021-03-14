@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkerboard (8x8)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/custom_checkerboard.css') }}">
+</head>
+<body>
+<div class="container">
+    <table class="board">
+        {% for row in range(0, rowCount): %}
+            <tr>
+                {% for column in range(0, columnCount): %}
+                    <td class="color{{(row + column)%2 + 1}}"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>        
+</div>
+</body>
+</html>
