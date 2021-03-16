@@ -242,6 +242,14 @@
 // to ["7", "33-34", "56-59", "61"]
 // to "7, 33-34, 56-59, 61"
 
-function bookIndex(input) {
+// function bookIndex(input) {
 
+// }
+
+
+class ListNode {
+    constructor(value){
+        this.value = value;
+        this.next = null;
+    }
 }

@@ -75,16 +75,16 @@ d.next = e;
   // for the above examples, something like:
   // "3 - 7 - 4"
 
-// function display(node) { 
-//     var output = ""; //creates a blank output to append the strings onto
-//     var runner = node; //creates a value that we iterate forward with, "runs" through the list nodes
-//     while (runner != null){ //while loop iterates forward until runner is set to null, which is the tail of the list. 
-//         output += runner.value + " - ";
-//         runner = runner.next;
-//     }
-//     // This while loop is the "classic" way to iterate through a list node list
-//     return output
-// }
+function display(node) { 
+    var output = ""; //creates a blank output to append the strings onto
+    var runner = node; //creates a value that we iterate forward with, "runs" through the list nodes
+    while (runner != null){ //while loop iterates forward until runner is set to null, which is the tail of the list. 
+        output += runner.value + " - ";
+        runner = runner.next;
+    }
+    // This while loop is the "classic" way to iterate through a list node list
+    return output
+}
 
 // // This is a slightly different version that stops the while loop on the node right before the tail, then adds on the final value outside the while loop. This allows you to trim off the final dash
 // function display(node) { 
