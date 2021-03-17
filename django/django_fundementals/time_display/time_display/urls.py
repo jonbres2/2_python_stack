@@ -1,4 +1,4 @@
-"""first_django_project URL Configuration
+"""time_display URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -16,5 +16,5 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('first_django_project_app.urls')),
+    path('', include('time_display_app.urls'))
 ]
